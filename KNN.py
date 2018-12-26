@@ -38,7 +38,7 @@ class KNNClassifier:
             voteIlabel = self.labels[sortedDistIndicies[i]]
             classCount[voteIlabel] = classCount.get(voteIlabel, 0) + 1
         # get fittest label
-        sortedClassCount = sorted(classCount.iteritems(), key=operator.itemgetter(1), reverse=True)
+        sortedClassCount = sorted(classCount.items(), key=operator.itemgetter(1), reverse=True)
         return sortedClassCount[0][0]
 
     def _normDataSet(self):
